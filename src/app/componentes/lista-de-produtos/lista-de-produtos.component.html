@@ -1,14 +1,27 @@
-<div class="main-content">
-  <div class="section-content section-content-p30"></div>
-  <div class="container-fluid">
-    <div class="row">
+<div class="main">
+  <section class="container-prod">
+    <div *ngFor="let item of products" class="prod">
+      <div class="border-1 border-solid border-400 border-round m-2 h-16rem w-17rem text-center">
 
-      <div *ngFor="let item of products" class="mb-3 format_align_center col-sm-3">
-        <img src="{{ item.imageUrl }}" class="w-50  img-responsive">
-        <p>{{ item.name }}</p>
-        <div class="price">{{ item.unitPrice | currency: 'BRL'}}</div>
-        <a href="#" class="primary-btn">Add cart</a>
+        <a routerLink="/produtos/{{item.id}}" routerLinkActive="active-link">
+          <img src="{{ item.imageUrl }}" [alt]="item.name" class="w-10" />
+        </a>
+
+        <div class="align-items-center flex justify-content-around">
+          <div class="">
+            <h4 class="mb-1 text-xs w-12 ">{{ item.name }}</h4>
+            <div class="mt-0 mb-3">{{ item.unitPrice | currency: 'BRL'}}</div>
+          </div>
+
+          <div class="car-buttons justify-content-center pb-3">
+            <p-button type="button" (onClick)="addCart(item)" styleClass="p-button w-3rem h-3rem"
+              icon="pi pi-shopping-cart"></p-button>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+
+  </section>
+  <p-paginator styleClass="paginacao" (onPageChange)="paginacao($event)" [first]="0" [rows]="8"
+    [totalRecords]="totalElementos"></p-paginator>
 </div>

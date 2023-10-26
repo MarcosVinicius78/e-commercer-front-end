@@ -1,0 +1,36 @@
+:host ::ng-deep{
+  .container-cart{
+    border-radius: 10px;
+    width: 1160px;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .botao-remover{
+    margin-top: 10px;
+    width: 100px;
+    height: 25px;
+  }
+
+  .botao-checkout{
+    width: 110px;
+    height: 30px;
+  }
+
+  .teste{
+    height: 620px;
+  }
+
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background: #f1f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: #acacac;
+  }
+}

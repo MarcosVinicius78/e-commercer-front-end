@@ -1,0 +1,48 @@
+<div class="teste">
+  <div class="container-cart">
+    <div class="flex justify-content-center" *ngIf="produtos.length == 0">
+      <p>
+        Não tem produtos
+      </p>
+    </div>
+    <table *ngIf="produtos.length > 0" class="table table-bordered">
+      <thead>
+        <tr>
+          <th width="20%">Imagem do produto</th>
+          <th width="50%">Detalhes do Produto</th>
+          <th width="30%"></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr *ngFor="let item of produtos">
+          <td><img src="{{ item.imageUrl }}" class="img-responsive" width="150px"></td>
+          <td>
+            <p>{{ item.name }}</p>
+            <p></p>
+            <p>{{ item.unitPrice | currency: 'BRL' }}</p>
+          </td>
+          <td>
+            <div class="mt-5 border-round-3xl bg-white w-3 flex justify-content-center">
+              <input (click)="adcionarProduto(item,'-')" class="w-5 border-1 bg-white" value="-" type="button">
+              <input class="w-8 border-1 text-center" type="text" value="{{ item.quantity }}">
+              <input (click)="adcionarProduto(item,'+')" class="w-5 border-1 bg-white" type="button" value="+">
+            </div>
+            <p></p>
+            <p-button styleClass="botao-remover" (click)="removerProduto(item)">Remove</p-button>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="2"></td>
+          <td><b>Total Quantity: {{ quantidade }}</b>
+            <p>Shipping FREE</p>
+            <b>Total Price: {{ total | currency: 'BRL' }}</b><br>
+            <a styleClass="botao-checkout" routerLink="/checkout" class="primary-btn">Checkout</a>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>

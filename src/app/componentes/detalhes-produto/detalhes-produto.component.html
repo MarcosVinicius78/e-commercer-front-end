@@ -1,0 +1,31 @@
+
+  <div class="detalhes flex align-items-center justify-content-around">
+    <img class="w-10 h-20rem" src="{{ produto.imageUrl }}">
+    <div>
+      <header>
+        <h3>{{produto.name}}</h3>
+
+        <div class="price">{{ produto.unitPrice }}</div>
+      </header>
+
+      <div class="my-8">
+        <h4>Descrição</h4>
+        <p class="w-11">
+          {{ produto.description }}
+        </p>
+
+        <div class="mt-5 border-round-3xl bg-white w-3 flex justify-content-center">
+          <input (click)="adcionarProduto('-')" class="w-5 border-1 bg-white" value="-" type="button">
+          <input class="w-8 border-1 text-center" type="text" value="{{quantidade}}">
+          <input (click)="adcionarProduto('+')" class="w-5 border-1 bg-white" type="button" value="+">
+        </div>
+      </div>
+
+      <div class="justify-content-around flex">
+        <p-button (onClick)="addCart()" class="botao-adcionar" label="Adcionar ao Carrinho"></p-button>
+        <p-button class="botao-comprar" label="Comprar Produto"></p-button>
+      </div>
+    </div>
+  </div>
+
+

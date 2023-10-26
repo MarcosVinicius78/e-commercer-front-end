@@ -1,0 +1,23 @@
+:host ::ng-deep {
+
+  .paginacao {
+    background-color: #ffffff00;
+    width: 1200px;
+    margin-left: auto;
+  }
+
+  .container-prod {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin: 0px 10px 0px 10px;
+    height: 545px;
+    width: 1160px;
+    border-radius: 5px;
+  }
+
+  .main{
+    height: 100vh;
+  }
+
+}

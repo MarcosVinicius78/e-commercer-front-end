@@ -1,0 +1,27 @@
+:host ::ng-deep{
+  .main{
+    width: 1500px;
+    height: 100vh;
+    max-height: 620px;
+    overflow-y: auto;
+  }
+
+  .section{
+    height: 500px;
+    border-radius: 10px;
+    background-color: white;
+  }
+
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background: #f1f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background: #acacac;
+  }
+}

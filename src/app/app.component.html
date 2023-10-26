@@ -1,64 +1,39 @@
-<div class="page-wrapper">
-
-  <!-- MENU SIDEBAR-->
-  <aside class="menu-sidebar d-none d-lg-block">
-    <div class="logo">
-      <a href="home.html">
-        <img src="assets/images/logo.png" alt="luv2shop" class="img-responsive">
-      </a>
-    </div>
-    <div class="menu-sidebar-content js-scrollbar1">
-      <nav class="navbar-sidebar">
-        <ul class="list-unstyled navbar-list">
-          <li>
-            <a href="#">Books</a>
-          </li>
-          <li>
-            <a href="#">Coffee Mugs</a>
-          </li>
-          <li>
-            <a href="#">Mouse Pads</a>
-          </li>
-          <li>
-            <a href="#">Luggage Tags</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </aside>
-  <!-- END MENU SIDEBAR-->
+<div class="teste page-wrapper">
 
   <!-- PAGE CONTAINER-->
   <div class="page-container">
     <!-- HEADER DESKTOP-->
-    <header class="header-desktop">
-      <div class="section-content section-content-p30">
-        <div class="container-fluid">
-          <div class="header-wrap">
-            <form class="form-header" onsubmit="return false;" method="GET">
-              <input class="au-input au-input-xl" type="text" name="search" placeholder="Search for data ..." />
-              <button class="au-btn-submit" type="submit">
-                Search
-              </button>
-            </form>
-            <div class="cart-area d-n">
-              <a href="shopping-detail.html">
-                <div class="total">19.22 <span> 2</span> </div> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-              </a>
-            </div>
-          </div>
-          <div class="account-wrap"></div>
-        </div>
-      </div>
-    </header>
-    <!-- END HEADER DESKTOP-->
 
-    <app-lista-de-produtos></app-lista-de-produtos>
+    <header class="header-desktop">
+      <div class="ml-3 logo">
+        <a routerLink="/products">
+          <h1 class="text-lg">MundoVariado</h1>
+        </a>
+      </div>
+
+
+      <app-search></app-search>
+
+      <app-login-status></app-login-status>
+
+      <app-car-status></app-car-status>
+
+    </header>
+
+    <div [ngClass]="true ? 'mt-5 flex justify-content-center justify-content-around' : 'mt-5 flex justify-content-center'">
+
+      <aside  class="menu">
+        <app-product-category-menu></app-product-category-menu>
+      </aside>
+
+      <router-outlet></router-outlet>
+    </div>
+
 
   </div>
 </div>
 
-<footer>
+<footer class="roda">
   <ul>
     <li><a href="#">About Us</a></li>
     <li><a href="#">Contact Us</a></li>
