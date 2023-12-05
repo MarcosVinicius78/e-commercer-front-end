@@ -28,6 +28,7 @@ import { LoginStatusComponent } from './componentes/login-status/login-status.co
 import { AuthRouteguard } from './routeguard/auth-routeguard.ts';
 import { RequireService } from './interceptors/require.service';
 import { OrderHistoryComponent } from './componentes/order-history/order-history.component';
+import { RegisterComponent } from './componentes/register/register.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { OrderHistoryComponent } from './componentes/order-history/order-history
     CheckoutComponent,
     LoginComponent,
     LoginStatusComponent,
-    OrderHistoryComponent
+    OrderHistoryComponent,
+    RegisterComponent
    ],
   imports: [
     BrowserModule,

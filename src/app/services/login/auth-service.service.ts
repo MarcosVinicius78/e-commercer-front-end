@@ -26,8 +26,6 @@ export class AuthServiceService {
 
     window.sessionStorage.setItem('userdetails', JSON.stringify(user));
 
-    this.isAuthenticad.next(true);
-
     return this.http.get(`${this.BASIC_URL}/api/user`, {observe: 'response', withCredentials: true});
 
     // return this.http.post<[]>(this.BASIC_URL + 'authenticate',

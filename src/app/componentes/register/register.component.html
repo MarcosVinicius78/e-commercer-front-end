@@ -1,0 +1,43 @@
+<section>
+  <div class="login">
+    <form [formGroup]="validateForm" (ngSubmit)="register()">
+
+      <div class="label-username">
+        <label for="username">Username</label>
+      </div>
+      <div>
+        <input type="text" pInputText formControlName="username">
+      </div>
+
+      <div class="label-password">
+        <label for="password">Password</label>
+      </div>
+      <div>
+        <input type="text" pInputText formControlName="password">
+      </div>
+
+      <div class="label-password">
+        <label for="email">E-mail</label>
+      </div>
+      <div>
+        <input type="text" pInputText formControlName="email">
+      </div>
+
+      <div class="label-password">
+        <label for="primeiroNome">Primeiro Nome</label>
+      </div>
+      <div>
+        <input type="text" pInputText formControlName="primeiroNome">
+      </div>
+
+      <div class="label-password">
+        <label for="ultimoNome">Ultimo Nome</label>
+      </div>
+      <div>
+        <input type="text" pInputText formControlName="ultimoNome">
+      </div>
+
+      <p-button styleClass="button" type="submit" label="Registrar"></p-button>
+    </form>
+  </div>
+</section>

@@ -38,6 +38,8 @@ export class LoginComponent {
       let email = this.cliente.email
       sessionStorage.setItem('email', email);
       this.route.navigate(['dashboard']);
+    }, err => {
+      console.log(err);
     })
 
   }

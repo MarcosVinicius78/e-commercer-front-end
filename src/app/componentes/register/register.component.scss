@@ -1,0 +1,41 @@
+:host ::ng-deep{
+  .login{
+    background-color: rgb(94, 94, 94);
+    width: 400px;
+    height: 550px;
+
+    border-radius: 10px;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section{
+    display: flex;
+    height: 80vh;
+  }
+
+  .button{
+    margin-top: 20px;
+    width: 200px;
+  }
+
+  .label-username{
+    color: aliceblue;
+    width: 300px;
+    margin-top: 10px;
+  }
+
+  .label-password{
+    width: 300px;
+    color: aliceblue;
+    margin-top: 10px;
+  }
+
+  input{
+    width: 300px;
+  }
+}

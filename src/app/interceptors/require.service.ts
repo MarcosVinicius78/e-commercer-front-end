@@ -12,9 +12,11 @@ export class RequireService implements HttpInterceptor {
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     let httpHeaders = new HttpHeaders();
+
     if(sessionStorage.getItem('userdetails')){
       this.user = JSON.parse(sessionStorage.getItem('userdetails')!);
     }
+
     if(this.user && this.user.password && this.user.username){
       httpHeaders = httpHeaders.append('Authorization', 'Basic ' + window.btoa(this.user.username + ':' + this.user.password));
     }else{
@@ -33,6 +35,7 @@ export class RequireService implements HttpInterceptor {
     const xhr = req.clone({
       headers: httpHeaders
     });
+
   return next.handle(xhr).pipe(tap(
       (err: any) => {
         if (err instanceof HttpErrorResponse) {
